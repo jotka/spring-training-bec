@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<beans:bean id="roleVoter" class="org.springframework.security.access.vote.RoleVoter">
+		<beans:property name="rolePrefix" value=""/>
+	</beans:bean>
+
+	<beans:bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+		<beans:constructor-arg name="decisionVoters"
+			ref="roleVoter" />
+	</beans:bean>
+
+	<http authentication-manager-ref="jdbc-auth" access-decision-manager-ref="accessDecisionManager">
+		<intercept-url pattern="/emp/**" access="Admin" />
+
+        <form-login login-page="/login" authentication-failure-url="/denied"
+                    username-parameter="username" password-parameter="password" default-target-url="/home" />
+		<logout invalidate-session="true" logout-success-url="/login" logout-url="/j_spring_security_logout" />
+		<access-denied-handler error-page="/denied"/>
+
+        <session-management invalid-session-url="/login">
+			<concurrency-control max-sessions="1" expired-url="/login" />
+		</session-management>
+	</http>
+
+    <!--in-memory auth-->
+	<authentication-manager id="in-memory-auth">
+		<authentication-provider>
+			<user-service>
+				<user name="user" password="12345" authorities="Admin" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+    <!--DAO Auth-->
+    <beans:bean id="userDetailsService" class="pl.finsys.authentication.dao.AppUserDetailsServiceDAO" />
+
+	<authentication-manager id="dao-auth">
+		<authentication-provider user-service-ref="userDetailsService"/>
+	</authentication-manager>
+
+    <!--JDBC auth-->
+    <authentication-manager id="jdbc-auth">
+		<authentication-provider>
+			<jdbc-user-service data-source-ref="dataSource"
+                               users-by-username-query="select username,password,enabled from security_users where username = ?"
+                               authorities-by-username-query="select username,role from security_user_roles where username = ?" />
+		</authentication-provider>
+	</authentication-manager>
+
+    <beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <beans:property name="location" value="classpath:database.properties"/>
+    </beans:bean>
+
+    <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <beans:property name="driverClassName" value="${jdbc.driverClassName}" />
+        <beans:property name="url" value="${jdbc.url}" />
+        <beans:property name="username" value="${jdbc.username}" />
+        <beans:property name="password" value="${jdbc.password}" />
+    </beans:bean>
+
+</beans:beans>

@@ -1,0 +1,58 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<aop:aspectj-autoproxy />
+
+	<bean id="badHacker" class="pl.finsys.aspect.HackerImpl" />
+
+	<!-- Aspect -->
+	<bean id="greatAuditor" class="pl.finsys.aspect.Auditor" />
+
+	<aop:config>
+
+		<aop:aspect id="aspectLoggging" ref="greatAuditor" >
+
+			<!-- @Before -->
+			<aop:pointcut id="pointCutBefore" expression="..." />
+
+			<aop:before method="logBefore" pointcut-ref="..." />
+			
+			<!-- @After -->
+			<aop:pointcut id="pointCutAfter"
+                          expression="..." />
+
+			<aop:after method="logAfter" pointcut-ref="..." />
+			
+			<!-- @AfterReturning -->
+			<aop:pointcut id="pointCutAfterReturning"
+                          expression="..." />
+
+			<aop:after-returning method="logAfterReturning" returning="result" 
+				pointcut-ref="..." />
+			
+			
+			<!-- @AfterThrowing -->
+			<aop:pointcut id="pointCutAfterThrowing"
+                          expression="..." />
+			
+			<aop:after-throwing method="logAfterThrowing" throwing="error" 
+				pointcut-ref="..."  />
+			
+			
+			<!-- @Around -->
+			<aop:pointcut id="pointCutAround"
+                          expression="..." />
+			
+			<aop:around method="logAround" pointcut-ref="..."  />
+			
+		</aop:aspect>
+
+	</aop:config>
+
+
+</beans>

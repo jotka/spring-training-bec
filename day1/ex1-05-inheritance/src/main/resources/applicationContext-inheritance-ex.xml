@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="baseTeamMadagascar" abstract="true">
+        <property name="country" value="Madagascar" />
+    </bean>
+
+    <bean id="madagascarFootballTeam" class="pl.finsys.inheritanceExample.MadagascarFootballTeam">
+        <property name="action" value="play" />
+        <property name="type" value="1" />
+    </bean>
+
+</beans>

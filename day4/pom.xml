@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>pl.finsys</groupId>
+        <artifactId>spring-training</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>day4</artifactId>
+
+    <packaging>pom</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>${spring.data.jpa.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+    </dependencies>
+
+	<modules>
+		<module>4-01-security-helloWorld-xml</module>
+		<module>4-02-security-helloWorld-annotation</module>
+        <module>4-03-security-authentication</module>
+        <module>4-04-access-control</module>
+        <module>4-05-security-limitLogin-xml</module>
+        <module>4-06-security-limitLogin-annotation</module>
+        <module>4-07-http-basic-auth</module>
+        <module>4-08-customize-403</module>
+        <module>4-09-security-custom-loginForm</module>
+        <module>4-10-get-logged-username</module>
+    </modules>
+</project>

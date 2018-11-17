@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>pl.finsys</groupId>
+        <artifactId>spring-training</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>day2</artifactId>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>2-00-events</module>
+        <module>2-01-mvc-helloworld</module>
+        <module>2-02-mvc-handler-mapping</module>
+        <module>2-03-mvc-methodname-resolver</module>
+        <module>2-04-mvc-view-resolvers</module>
+        <module>2-05-mvc-url-mapping</module>
+        <module>2-06-mvc-matrix-vars</module>
+        <module>2-07-mvc-response</module>
+        <module>2-08-mvc-rest</module>
+        <module>2-09-mvc-controler-advice</module>
+        <module>2-10-mvc-form-handling</module>
+        <module>2-11-mvc-form-hashmap</module>
+        <module>2-12-mvc-form-validation</module>
+        <module>2-13-mvc-interceptor</module>
+        <module>2-14-mvc-localization</module>
+        <module>2-15-mvc-fileUpload</module>
+        <module>2-16-mvc-excel</module>
+        <module>2-17-mvc-pdf</module>
+        <module>2-18-mvc-callable-async</module>
+
+        <module>ex2-01-mvc-helloworld</module>
+        <module>ex2-02-mvc-handler-mapping</module>
+        <module>ex2-03-mvc-methodname-resolver</module>
+        <module>ex2-04-mvc-view-resolvers</module>
+        <module>ex2-05-mvc-url-mapping</module>
+        <module>ex2-07-mvc-response</module>
+        <module>ex2-08-mvc-rest</module>
+
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>8.0.5</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+
+</project>

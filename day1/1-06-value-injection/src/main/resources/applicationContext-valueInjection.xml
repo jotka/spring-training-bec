@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--normalnie-->
+    <bean id="fileNameGenerator1" class="pl.finsys.valueInjectionExample.FileNameGenerator">
+        <property name="name">
+            <value>generator1</value>
+        </property>
+        <property name="type">
+            <value>type1</value>
+        </property>
+    </bean>
+
+    <!--skrotowo-->
+    <bean id="fileNameGenerator2" class="pl.finsys.valueInjectionExample.FileNameGenerator">
+        <property name="name" value="generator2"/>
+        <property name="type" value="type2"/>
+    </bean>
+
+
+    <!--z uzyciem "p-schema"-->
+    <bean id="fileNameGenerator3" class="pl.finsys.valueInjectionExample.FileNameGenerator"
+          p:name="generator3" p:type="type3"/>
+
+</beans>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>pl.finsys</groupId>
+        <artifactId>spring-training</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>day1</artifactId>
+
+    <packaging>pom</packaging>
+
+	<modules>
+        <module>1-01-hello-world</module>
+        <module>1-02-autowired</module>
+        <module>1-03-bean-scopes</module>
+        <module>1-04-dependency-injection</module>
+        <module>1-05-inheritance</module>
+        <module>1-06-value-injection</module>
+        <module>1-07-propertyPlaceholder</module>
+        <module>1-08-collections</module>
+        <module>1-09-inner-beans</module>
+		<module>1-10-java-config</module>
+        <module>1-11-component-scan</module>
+        <module>1-12-lifecycle</module>
+        <module>1-13-aop-xml-config</module>
+        <module>1-14-aop-annotations</module>
+        <module>1-15-aop-interceptor</module>
+        <module>1-16-execution-order</module>
+
+		<!--cwiczenia-->
+        <module>ex1-01-hello-world</module>
+        <module>ex1-02-autowired</module>
+        <module>ex1-03-bean-scopes</module>
+        <module>ex1-04-dependency-injection</module>
+        <module>ex1-05-inheritance</module>
+        <module>ex1-06-value-injection</module>
+        <module>ex1-07-propertyPlaceholder</module>
+        <module>ex1-08-collections</module>
+        <module>ex1-09-inner-beans</module>
+		<module>ex1-10-java-config</module>
+        <module>ex1-11-component-scan</module>
+        <module>ex1-13-aop-xml-config</module>
+        <module>ex1-14-aop-annotations</module>
+
+    </modules>
+</project>

@@ -1,0 +1,47 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--handlery-->
+
+    <!-- 1. BeanNameUrlHandler - domyslny handler -->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+        <!--definicja kolejności uruchamiania handlerów-->
+        <property name="order" value="1" />
+    </bean>
+
+    <!-- 2. ControllerClassNameHandler-->
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+        <property name="order" value="2" />
+        <property name="caseSensitive" value="true" /> <!-- /helloGuest != /helloguest.htm-->
+    </bean>
+
+    <!-- 3. SimpleUrlHandler-->
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="order" value="3" />
+        <property name="mappings">
+            <props>
+                <prop key="/stranger.htm">helloStrangerController</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!--definicje kontrolerow-->
+
+    <!-- /welcome.htm => DispatcherServlet przekieruje request do WelcomeController -->
+	<bean name="/welcome.htm" class="pl.finsys.handlerTypes.controller.HelloWorldController" />
+
+    <!-- /helloGuest.htm => DispatcherServlet przekieruje request do HelloGuestController -->
+    <!-- "convention over configuration" -->
+    <bean id="helloGuestController" class="pl.finsys.handlerTypes.controller.HelloGuestController" />
+
+    <!-- /stranger.htm => DispatcherServlet przekieruje request do HelloStrangerController -->
+    <bean id="helloStrangerController" class="pl.finsys.handlerTypes.controller.HelloStrangerController" />
+
+</beans>

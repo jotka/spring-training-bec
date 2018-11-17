@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="baseCustomerPoland" abstract="true">
+		<property name="country" value="Poland" />
+	</bean>
+
+	<bean id="customerBean" parent="baseCustomerPoland" class="pl.finsys.inheritanceExample.Customer">
+		<property name="action" value="buy" />
+		<property name="type" value="1" />
+	</bean>
+
+</beans>

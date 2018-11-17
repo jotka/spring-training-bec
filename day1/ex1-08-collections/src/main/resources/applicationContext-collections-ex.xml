@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="kid1" class="pl.finsys.collectionsExample.Kid">
+        <property name="name" value="Jas" />
+        <property name="address" value="Kamionkowa 2" />
+        <property name="age" value="8" />
+    </bean>
+
+    <bean id="kid2" class="pl.finsys.collectionsExample.Kid">
+        <property name="name" value="Malgosia" />
+        <property name="address" value="Rozana 7" />
+        <property name="age" value="8" />
+    </bean>
+
+    <bean id="kid3" class="pl.finsys.collectionsExample.Kid">
+        <property name="name" value="Michal" />
+        <property name="address" value="Gorna 5" />
+        <property name="age" value="7" />
+    </bean>
+
+    <bean id="kid4" class="pl.finsys.collectionsExample.Kid">
+        <property name="name" value="Kasia" />
+        <property name="address" value="Kwiatowa 2" />
+        <property name="age" value="9" />
+    </bean>
+
+	<bean id="naszaSzkola" class="pl.finsys.collectionsExample.School">
+
+
+	</bean>
+
+</beans>
