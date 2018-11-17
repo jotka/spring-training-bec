@@ -18,7 +18,7 @@ public class App {
 
 
     	CustomerService service = (CustomerServiceImpl)context.getBean("customerService");
-    	service.setMessage("example message");
+    	service.setMessage("simplerest message");
         logger.info("Message : " + service.getMessage());
     	
     	//ponownie ten sam bean
@@ -26,7 +26,7 @@ public class App {
         logger.info("Message : " + serviceAgain.getMessage());
 
         AnotherService anotherService = (AnotherServiceImpl)context.getBean("anotherService");
-        anotherService.setMessage("another example message");
+        anotherService.setMessage("another simplerest message");
         logger.info("Message : " + anotherService.getMessage());
 
         //ponownie ten sam bean

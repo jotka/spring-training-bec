@@ -38,10 +38,6 @@
     </dependencies>
 
 	<modules>
-        <module>3-01-jdbc</module>
-        <module>3-02-jdbc-template</module>
-        <module>3-03-hibernate</module>
-        <module>3-04-hibernate-template</module>
         <module>3-05-spring-jpa</module>
         <module>3-06-spring-data-jpa</module>
         <module>3-07-transactions</module>

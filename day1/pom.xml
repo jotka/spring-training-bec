@@ -31,6 +31,10 @@
         <module>1-15-aop-interceptor</module>
         <module>1-16-execution-order</module>
 
+        <module>1-17-boot-helloworld</module>
+        <module>1-18-boot-web</module>
+        <module>1-19-boot-simple-rest</module>
+
 		<!--cwiczenia-->
         <module>ex1-01-hello-world</module>
         <module>ex1-02-autowired</module>

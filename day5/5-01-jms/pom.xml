@@ -4,7 +4,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>5-01-jms</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<parent>
 		<groupId>pl.finsys</groupId>

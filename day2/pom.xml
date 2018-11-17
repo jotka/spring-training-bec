@@ -17,7 +17,6 @@
         <module>2-00-events</module>
         <module>2-01-mvc-helloworld</module>
         <module>2-02-mvc-handler-mapping</module>
-        <module>2-03-mvc-methodname-resolver</module>
         <module>2-04-mvc-view-resolvers</module>
         <module>2-05-mvc-url-mapping</module>
         <module>2-06-mvc-matrix-vars</module>
@@ -30,13 +29,10 @@
         <module>2-13-mvc-interceptor</module>
         <module>2-14-mvc-localization</module>
         <module>2-15-mvc-fileUpload</module>
-        <module>2-16-mvc-excel</module>
         <module>2-17-mvc-pdf</module>
-        <module>2-18-mvc-callable-async</module>
 
         <module>ex2-01-mvc-helloworld</module>
         <module>ex2-02-mvc-handler-mapping</module>
-        <module>ex2-03-mvc-methodname-resolver</module>
         <module>ex2-04-mvc-view-resolvers</module>
         <module>ex2-05-mvc-url-mapping</module>
         <module>ex2-07-mvc-response</module>

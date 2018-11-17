@@ -13,7 +13,7 @@
 	<authentication-manager>
 		<authentication-provider>
 			<user-service>
-				<user name="spring" password="lublin" authorities="ROLE_USER" />
+				<user name="spring" password="warsaw" authorities="ROLE_USER" />
 			</user-service>
 		</authentication-provider>
 	</authentication-manager>

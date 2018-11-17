@@ -45,7 +45,7 @@ public class ResponseController {
     public ResponseEntity<String> responseEntityCustomHeaders() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.TEXT_PLAIN);
-        headers.add("city", "Lublin");
+        headers.add("city", "Warsaw");
 
         return new ResponseEntity<>("The String ResponseBody with custom header Content-Type=text/plain",
             headers, HttpStatus.OK);
