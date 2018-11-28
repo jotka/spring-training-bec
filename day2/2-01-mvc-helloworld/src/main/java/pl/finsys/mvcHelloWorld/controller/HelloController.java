@@ -26,7 +26,7 @@ public class HelloController {
         logger.info("> HelloController GET");
 
 		model.addAttribute("message", "Spring MVC Hello World");
-		return VIEW_HELLO;
+		return "hello";
 
 	}
 	
